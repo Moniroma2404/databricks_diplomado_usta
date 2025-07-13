@@ -1,41 +1,45 @@
-# Procesamiento de Datos Públicos Colombianos con Databricks 
+# 🧠 Análisis de Datos Públicos de Colombia en Databricks
 
-Este proyecto tiene como objetivo descargar, limpiar, transformar y cargar dos conjuntos de datos públicos provenientes del portal de Datos Abiertos de Colombia. El procesamiento se realiza en Databricks, aprovechando su entorno escalable para análisis de datos.
+Este proyecto tiene como objetivo la recolección, limpieza, transformación y análisis de dos conjuntos de datos públicos provenientes del portal de datos abiertos del gobierno colombiano. Los datos se procesarán y se cargarán a un entorno de *Databricks* para facilitar su análisis y visualización.
 
-## 📂 Datasets Utilizados
+## 📦 Datasets utilizados
 
-1. *Contratos del Estado (SECOP):*  
-   [Descargar CSV](https://www.datos.gov.co/resource/rpmr-utcd.csv)  
-   Contiene información sobre contratos estatales registrados en Colombia.
+1. *SECOP (Sistema Electrónico para la Contratación Pública)*
+   - URL: [rpmr-utcd.csv](https://www.datos.gov.co/resource/rpmr-utcd.csv)
+   - Descripción: Contiene registros de contratos públicos realizados por entidades estatales en Colombia.
 
-2. *Instituciones Educativas (MEN):*  
-   [Descargar CSV](https://www.datos.gov.co/resource/nudc-7mev.csv)  
-   Proporciona datos relacionados con las instituciones educativas en el país.
+2. *MEN (Ministerio de Educación Nacional)*
+   - URL: [nudc-7mev.csv](https://www.datos.gov.co/resource/nudc-7mev.csv)
+   - Descripción: Información relacionada con establecimientos educativos oficiales y privados en Colombia.
 
-## ⚙️ Procesamiento
+## ⚙️ Proceso del proyecto
 
-Las principales etapas del flujo de trabajo son:
+1. *Descarga de datos*
+   - Los datasets serán obtenidos usando SODAPI.
 
-- Carga de datos desde URLs usando SODAPI.
-- Inspección y limpieza inicial (valores nulos, formatos inconsistentes, etc.).
-- Transformaciones específicas por dataset (filtrado, renombrado de columnas, tipificación de datos).
-- Almacenamiento en Databricks como tablas estructuradas para análisis posterior.
+2. *Procesamiento y limpieza*
+   - Se eliminarán registros incompletos o inconsistentes.
+   - Se normalizarán campos clave como fechas y ubicaciones.
+   - Se realizarán transformaciones para facilitar el análisis.
 
-## 📊 Objetivos
+3. *Carga a Databricks*
+   - Los datos procesados se subirán al entorno de Databricks.
+   - Se crearán tablas estructuradas para su consulta mediante SQL o notebooks.
 
-- Unificar y estandarizar la información para facilitar su análisis.
-- Explorar posibles relaciones entre contratos estatales e instituciones educativas.
-- Preparar los datos para visualización y explotación con herramientas como Power BI o Notebooks en Databricks. 
+4. *Análisis*
+   - Estadísticas descriptivas.
+   - Visualizaciones interactivas.
+   - Cruce entre datos de contratación y datos educativos.
 
-## 🚀 Herramientas Utilizadas
+## 🛠️ Requisitos del proyecto
 
-- *Python 3.11+* para el procesamiento de datos.
-- *Pandas* para manipulación de estructuras tabulares.
-- *Databricks* como plataforma de ejecución y almacenamiento.
-- *Spark* para operaciones distribuidas (cuando sea necesario).
+- Python 3.11+
+- Pandas
+- PySpark (opcional)
+- Databricks CLI o acceso vía navegador
+- Jupyter Notebook o entorno similar
 
-## 📝 Notas Adicionales
+## 📈 Objetivos
 
-Este repositorio está diseñado para facilitar el acceso a datos limpios y bien estructurados, promoviendo la transparencia, el análisis reproducible y el uso responsable de la información pública.
-
----
+- Explorar la relación entre educación y contratación estatal en distintas regiones de Colombia.
+- Identificar patrones, tendencias y posibles zonas de mejora en la inversión pública y cobertura educativa.
